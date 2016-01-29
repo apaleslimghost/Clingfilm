@@ -29,7 +29,9 @@ program
 program
 	.command('install')
 	.action(options => {
-		var tree = require(path.resolve('clingfilm.json'));
+		var tree = {
+			dependencies: cling.depGraphToTree(require(path.resolve('clingfilm.json')))
+		};
 		writeFileAtomic(path.resolve('npm-shrinkwrap.json'), JSON.stringify(tree))
 			.then(() => loadConfig({}))
 			.then(() => install())
