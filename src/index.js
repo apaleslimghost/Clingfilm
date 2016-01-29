@@ -9,6 +9,7 @@ const pick = require('lodash.pick');
 const transform = require('lodash.transform');
 const renameKeys = require('@quarterto/rename-keys');
 const promisify = require('@quarterto/promisify');
+
 const _install = require('npm/lib/install');
 const {fromTree: _lsFromTree} = require('npm/lib/ls');
 const {recalculateMetadata: _recalc} = require('npm/lib/install/deps');
@@ -27,10 +28,10 @@ export const getIdealTree = () => loadConfig({
 })
 	.then(() => install())
 	.then(tree => recalculateMetadata(tree, npmlog))
-	.then(tree => lsFromTree('', tree, [], true));
+	.then(tree => lsFromTree('', tree, [], true)); // args, in order: package root (not important), tree, deps to list (empty array means all), silent mode (i.e. just return the tree obj)
 
 export function sanitiseDep(dependency) {
-	return renameKeys(pick(dependency, ['_from', '_id', 'name', '_resolved', 'version']), {
+	return renameKeys(pick(dependency, ['_from', '_id', '_resolved', 'name', 'version', 'from', 'id', 'resolved']), {
 		'_from': 'from',
 		'_id': 'id',
 		'_resolved': 'resolved'
@@ -45,6 +46,11 @@ export function hashDependencies(tree) {
 	});
 }
 
-export function dependencyEdges(tree, edges = []) {
-	
+export function dependencyEdges(deps, from = 'root', edges = [], refs = {}) {
+	for(let k in deps) {
+		edges.push([from, k]);
+		refs[k] = sanitiseDep(deps[k]);
+		dependencyEdges(deps[k].dependencies, k, edges, refs);
+	}
+	return {edges, refs};
 }
