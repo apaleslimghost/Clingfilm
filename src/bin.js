@@ -17,7 +17,7 @@ const die = e => {
 };
 
 program
-	.command('write')
+	.command('wrap')
 	.action(options => {
 		cling.getIdealTree()
 			.then(tree => cling.depTreeToGraph(tree.dependencies))
