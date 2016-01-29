@@ -38,24 +38,20 @@ export function sanitiseDep(dependency) {
 	});
 }
 
-export const hashDependencies = tree => transform(tree.dependencies, (newTree, dep) => {
-	var sanitised = sanitiseDep(dep);
-	sanitised.dependencies = hashDependencies(dep);
-	newTree[hash(sanitised)] = sanitised;
-});
-
 export function depTreeToGraph(deps, from = 'root', edges = [], refs = {}) {
 	for(let k in deps) {
-		edges.push([from, k]);
-		refs[k] = sanitiseDep(deps[k]);
-		refs[deps[k].id] = k;
-		dependencyEdges(deps[k].dependencies, k, edges, refs);
+		var sanitised = sanitiseDep(deps[k]);
+		var hashed = hash(sanitised);
+		edges.push([from, hashed]);
+		refs[hashed] = sanitised;
+		refs[sanitised.id] = hashed;
+		depTreeToGraph(deps[k].dependencies, hashed, edges, refs);
 	}
 	return {edges, refs};
 }
 
 export const depGraphToTree = ({edges, refs}, node = 'root') => transform(edges.filter(edge => edge[0] === node), (tree, edge) => {
 	var dep = refs[edge[1]];
-	dep.dependencies = depsTree({edges, refs}, edge[1]);
+	dep.dependencies = depGraphToTree({edges, refs}, edge[1]);
 	tree[dep.name] = dep;
 }, {});
