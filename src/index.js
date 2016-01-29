@@ -44,7 +44,7 @@ export const hashDependencies = tree => transform(tree.dependencies, (newTree, d
 	newTree[hash(sanitised)] = sanitised;
 });
 
-export function dependencyEdges(deps, from = 'root', edges = [], refs = {}) {
+export function depTreeToGraph(deps, from = 'root', edges = [], refs = {}) {
 	for(let k in deps) {
 		edges.push([from, k]);
 		refs[k] = sanitiseDep(deps[k]);
@@ -54,7 +54,7 @@ export function dependencyEdges(deps, from = 'root', edges = [], refs = {}) {
 	return {edges, refs};
 }
 
-export const depsTree = ({edges, refs}, node = 'root') => transform(edges.filter(edge => edge[0] === node), (tree, edge) => {
+export const depGraphToTree = ({edges, refs}, node = 'root') => transform(edges.filter(edge => edge[0] === node), (tree, edge) => {
 	var dep = refs[edge[1]];
 	dep.dependencies = depsTree({edges, refs}, edge[1]);
 	tree[dep.name] = dep;
