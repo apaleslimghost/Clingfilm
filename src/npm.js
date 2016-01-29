@@ -1,7 +1,8 @@
+const which = require('which').sync;
 const {load: _loadConfig, config: npmConfig} = require('npm');
 npmConfig.get = k => ({
-	git: '',
-	cache: ''
+	git: which('git'),
+	cache: '~/.npm'
 }[k]); // fake config so we can require npm internals. this gets replaced by loadConfig
 
 const _install = require('npm/lib/install');
