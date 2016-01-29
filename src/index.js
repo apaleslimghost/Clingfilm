@@ -22,7 +22,9 @@ const lsFromTree = promisify(_lsFromTree);
 
 export const getIdealTree = () => loadConfig({
 	'dry-run': true,
+	'no-optional': true,
 	'progress': false,
+	'force': true,
 })
 	.then(() => install())
 	.then(tree => recalculateMetadata(tree, npmlog))
