@@ -50,7 +50,16 @@ export function dependencyEdges(deps, from = 'root', edges = [], refs = {}) {
 	for(let k in deps) {
 		edges.push([from, k]);
 		refs[k] = sanitiseDep(deps[k]);
+		refs[deps[k].id] = k;
 		dependencyEdges(deps[k].dependencies, k, edges, refs);
 	}
 	return {edges, refs};
+}
+
+export function depsTree({edges, refs}, node = 'root') {
+	return transform(edges.filter(edge => edge[0] === node), (tree, edge) => {
+		var dep = refs[edge[1]];
+		dep.dependencies = depsTree({edges, refs}, edge[1]);
+		tree[dep.name] = dep;
+	}, {});
 }
