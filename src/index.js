@@ -5,11 +5,11 @@ const transform = require('lodash.transform');
 const renameKeys = require('@quarterto/rename-keys');
 const npmlog = require('npmlog');
 
-
 export const getIdealTree = () => loadConfig({
 	'dry-run': true,
 	'no-optional': true,
 	'progress': false,
+	'no-shrinkwrap': true
 })
 	.then(() => install())
 	.then(tree => recalculateMetadata(tree, npmlog))
