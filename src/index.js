@@ -1,30 +1,15 @@
-const {load: _loadConfig, config: npmConfig} = require('npm');
-npmConfig.get = k => ({
-	git: '',
-	cache: ''
-}[k]); // fake config so we can require npm internals. this gets replaced by loadConfig
-
+const {loadConfig, install, recalculateMetadata, lsFromTree} = require('./npm');
 const hash = require('object-hash');
 const pick = require('lodash.pick');
 const transform = require('lodash.transform');
 const renameKeys = require('@quarterto/rename-keys');
-const promisify = require('@quarterto/promisify');
-
-const _install = require('npm/lib/install');
-const {fromTree: _lsFromTree} = require('npm/lib/ls');
-const {recalculateMetadata: _recalc} = require('npm/lib/install/deps');
 const npmlog = require('npmlog');
 
-const loadConfig = promisify(_loadConfig);
-const install = promisify((cb) => _install([], (err, installed, tree) => cb(err, tree)));
-const recalculateMetadata = promisify(_recalc);
-const lsFromTree = promisify(_lsFromTree);
 
 export const getIdealTree = () => loadConfig({
 	'dry-run': true,
 	'no-optional': true,
 	'progress': false,
-	'force': true,
 })
 	.then(() => install())
 	.then(tree => recalculateMetadata(tree, npmlog))
