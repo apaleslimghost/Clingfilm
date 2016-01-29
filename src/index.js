@@ -29,7 +29,6 @@ export function depTreeToGraph(deps, from = 'root', edges = [], refs = {}) {
 		var hashed = hash(sanitised);
 		edges.push([from, hashed]);
 		refs[hashed] = sanitised;
-		refs[sanitised.id] = hashed;
 		depTreeToGraph(deps[k].dependencies, hashed, edges, refs);
 	}
 	return {edges, refs};
