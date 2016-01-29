@@ -9,7 +9,3 @@ lib/%.js: src/%.js
 	@mkdir -p $(@D)
 	$(BABEL) $(BABEL_OPTS) $< -o $@
 
-test: test.js $(LIB_FILES)
-	node test.js
-
-.PHONY: test
