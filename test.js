@@ -1,3 +1,6 @@
-var getIdealTree = require('./').getIdealTree;
+var cling = require('./');
 
-getIdealTree().then(console.log, e => console.error(e.stack));
+cling.getIdealTree()
+  .then(cling.hashDependencies)
+  .then(d => JSON.stringify(d, null, 2))
+  .then(console.log, e => console.error(e.stack));
