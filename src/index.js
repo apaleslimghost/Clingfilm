@@ -3,6 +3,7 @@ const hash = require('object-hash');
 const pick = require('lodash.pick');
 const filter = require('lodash.filter');
 const transform = require('lodash.transform');
+const flatMap = require('@quarterto/flatmap');
 const renameKeys = require('@quarterto/rename-keys');
 const transitiveDeps = require('@quarterto/transitive-dependencies');
 const npmlog = require('npmlog');
@@ -53,10 +54,12 @@ export const depGraphToTree = ({edges, refs}, node = 'root') => transform(edges.
 	tree[dep.name] = dep;
 }, {});
 
-// Take a tree (usually from clingfilm.json) and replace the parts of it from root with the new tree
-export function graftTree(root, {edges: oldEdges, refs: oldRefs, rootDeps: oldRootDeps}, {edges: newEdges, refs: newRefs, rootDeps: newRootDeps}) {
-	var rootHash = oldRootDeps[root];
-	var deps = [rootHash, ...transitiveDeps(oldEdges, rootHash)];
+// Take a tree (usually from clingfilm.json) and replace the parts of it from roots with the new tree
+export function graftTree(roots, {edges: oldEdges, refs: oldRefs, rootDeps: oldRootDeps}, {edges: newEdges, refs: newRefs, rootDeps: newRootDeps}) {
+	var deps = flatMap(roots, root => {
+		var rootHash = oldRootDeps[root];
+		return [rootHash, ...transitiveDeps(oldEdges, rootHash)];
+	});
 
 	return {
 		edges: oldEdges.filter(edge => !deps.some(dep => edge[0] === dep || edge[1] === dep)).concat(newEdges),
