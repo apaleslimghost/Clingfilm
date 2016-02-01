@@ -4,7 +4,8 @@
   "description": "better npm shrinkwrap",
   "main": "lib/index.js",
   "scripts": {
-    "prepublish": "make"
+    "prepublish": "make",
+    "test": "make test"
   },
   "bin": "lib/bin.js",
   "repository": {
@@ -37,7 +38,10 @@
     "write-file-atomic": "^1.1.4"
   },
   "devDependencies": {
+    "@quarterto/chai": "^1.0.0",
     "babel-cli": "^6.4.5",
-    "babel-preset-es2015": "^6.3.13"
+    "babel-preset-es2015": "^6.3.13",
+    "babel-register": "^6.4.3",
+    "mocha": "^2.4.5"
   }
 }
