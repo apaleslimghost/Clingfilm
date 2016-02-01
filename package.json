@@ -25,6 +25,7 @@
   "dependencies": {
     "@quarterto/promisify": "^1.0.0",
     "@quarterto/rename-keys": "^1.0.0",
+    "@quarterto/transitive-dependencies": "^1.4.0",
     "commander": "^2.9.0",
     "lodash.pick": "^4.0.1",
     "lodash.transform": "^4.0.1",
@@ -36,7 +37,6 @@
   },
   "devDependencies": {
     "babel-cli": "^6.4.5",
-    "babel-preset-es2015": "^6.3.13",
-    "browserify": "^9.0.8"
+    "babel-preset-es2015": "^6.3.13"
   }
 }
