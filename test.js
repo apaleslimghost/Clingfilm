@@ -9,7 +9,7 @@ module.exports = {
 		'basic tree': {
 			before() {
 				let foo = this.foo = fakePackage('foo', '1.0.0');
-				this.hashed = hash(foo);
+				this.hashed = 'foo-' + hash(foo);
 				this.graph = depTreeToGraph({foo});
 			},
 			
@@ -30,8 +30,8 @@ module.exports = {
 			before() {
 				let foo = this.foo = fakePackage('foo', '1.0.0');
 				let bar = this.foo = fakePackage('bar', '1.0.0');
-				this.hashedFoo = hash(foo);
-				this.hashedBar = hash(bar);
+				this.hashedFoo = 'foo-' + hash(foo);
+				this.hashedBar = 'bar-' + hash(bar);
 				foo.dependencies = {bar};
 				this.graph = depTreeToGraph({foo});
 			},

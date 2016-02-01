@@ -1,5 +1,5 @@
 const {loadConfig, install, recalculateMetadata, lsFromTree} = require('./npm');
-const hash = require('object-hash');
+const _hash = require('object-hash');
 const pick = require('lodash.pick');
 const filter = require('lodash.filter');
 const transform = require('lodash.transform');
@@ -11,6 +11,8 @@ const promisify = require('@quarterto/promisify');
 const {mkdir: _mkTempDir} = require('temp').track();
 const mkTempDir = promisify(_mkTempDir);
 
+const hash = pkg => `${pkg.name}-${_hash(pkg)}`;
+
 // Get an install tree from the package.json (or the array of packages to install/update)
 // Make npm install to a temp directory, so it outputs a maximal tree instead of just the diff to the current node_modules
 export const getIdealTree = (packages = []) => mkTempDir('clingfilm').then(where => loadConfig({
@@ -19,7 +21,7 @@ export const getIdealTree = (packages = []) => mkTempDir('clingfilm').then(where
 	'progress': false,
 	'no-shrinkwrap': true,
 })
-	.then(() => install(where, packages))
+	.then(() => install(packages.length ? where : null, packages))
 	.then(tree => lsFromTree('', tree, [], true)) // args, in order: package root (not important), tree, deps to list (empty array means all), silent mode (i.e. just return the tree obj)
 );
 
@@ -51,7 +53,7 @@ export function depTreeToGraph(deps, from = 'root', edges = [], refs = {}) {
 export const depGraphToTree = ({edges, refs}, node = 'root') => transform(edges.filter(edge => edge[0] === node), (tree, edge) => {
 	var dep = refs[edge[1]];
 	dep.dependencies = depGraphToTree({edges, refs}, edge[1]);
-	tree[dep.name] = dep;
+	tree[dep.name ] = dep;
 }, {});
 
 // Take a tree (usually from clingfilm.json) and replace the parts of it from roots with the new tree
