@@ -6,10 +6,10 @@
     ],
     [
       "root",
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e"
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "JSONStream-e8fd97bac996ae11333538cb66d370eaa583c090"
     ],
     [
@@ -21,11 +21,11 @@
       "through-155866dc09fe2d82522d0370679f128e77438d16"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "assert-6bbb8a3aed24ed1a211ece6117fdc4b156c8db99"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "browser-pack-c3e09ee8168224678ad9243e60cf2ac9ba5a57c6"
     ],
     [
@@ -57,11 +57,11 @@
       "umd-bbeb66c5e0a6057bb1d1b8229eb839c4cb845bca"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "browser-resolve-a812d809c1e756f2370dc29af9ac2de87370f420"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "browserify-zlib-99d47ebd6dfc3895a0f7234c17aea379485d2687"
     ],
     [
@@ -69,23 +69,23 @@
       "pako-15d723fbb4607043524e17a25a2bfe9a21a353cc"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
-      "buffer-9b1469e61f4e98527bfb9fe219c5a682741c82a9"
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
+      "buffer-4dcf2cc781451a51e286eea513b896f7003170f5"
     ],
     [
-      "buffer-9b1469e61f4e98527bfb9fe219c5a682741c82a9",
-      "base64-js-0254f94b41a0bfe8b13bff4d6d00cc1a5379e8f8"
+      "buffer-4dcf2cc781451a51e286eea513b896f7003170f5",
+      "base64-js-688eaa2134f78209956e7dee3a168f813e4aae1d"
     ],
     [
-      "buffer-9b1469e61f4e98527bfb9fe219c5a682741c82a9",
+      "buffer-4dcf2cc781451a51e286eea513b896f7003170f5",
       "isarray-28f66396d54e6c71742d292ccbcbd3febd618e32"
     ],
     [
-      "buffer-9b1469e61f4e98527bfb9fe219c5a682741c82a9",
+      "buffer-4dcf2cc781451a51e286eea513b896f7003170f5",
       "ieee754-59fa88f8454a44b25f57c4f14418f312b06a5a5e"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "concat-stream-3f2ac49249ec1f9bbad41839a6d25d0c6046cdfb"
     ],
     [
@@ -93,7 +93,7 @@
       "typedarray-36c0e2e723b362077d3dee24aeb87830fe471bad"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "console-browserify-3852c5d92eeccac25cf4ae36b4d9f69ff3773910"
     ],
     [
@@ -101,11 +101,11 @@
       "date-now-aa48f08f7925e08f653609e6f404306d3022ee7b"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "constants-browserify-554e781f43ff3526d6aa4fea2c2869a7d934b7fb"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "crypto-browserify-0e44c18e85f1596f09839c386855c1187e66dd99"
     ],
     [
@@ -209,27 +209,27 @@
       "randombytes-5c43be825c8a1caa041c378ddbecd348c4471140"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "defined-3ef7dde989f1d948d5bb7245f9aaa5c7d82f27ea"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "deps-sort-523298d369ae938d33593e5abe54b2be5e6ccf96"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "domain-browser-2cedf8d606c68d5cd91bb48e6a7a82b0dc70e7a3"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "duplexer2-7dc379244b340e7dccac97f5953257cd01becd4a"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "events-1eecb731300c445f78984efc5eca1334d93cee42"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "glob-3b1136f943ac407a19212b96c22d59c7a916f1a1"
     ],
     [
@@ -265,7 +265,7 @@
       "path-is-absolute-1457daeb7cd6b76ede7f5f8bd7b98b90e8e534e6"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "has-981ff7c45b02c4757e378d5dc0f52df2060fe253"
     ],
     [
@@ -273,19 +273,19 @@
       "function-bind-d697b5c79e096093f7d1fe74e6c7d21c2a599b6d"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "htmlescape-f6b14cfc2c0567f3ac41ee44353d5b43ac68ac19"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "https-browserify-801f64a804c6189a01a081d82a13d9ca720449cf"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "inherits-b570da1519aa809e3d15bc80dd7c8bf3e73f7938"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "insert-module-globals-9a27a073a5e81bed8b61e6abef13a355cf0754d4"
     ],
     [
@@ -301,11 +301,11 @@
       "astw-61d5f0adc2d42990924f76fa0d7be4b146d88c34"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "isarray-17fa9f84c8f5074fec7fe62ce0a6dab27dc9482b"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "labeled-stream-splicer-6647c53e0bd11aa9edc1a9af7408a9a7996acd74"
     ],
     [
@@ -313,7 +313,7 @@
       "stream-splicer-97627df77f80687097c89f874408929dec445beb"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "module-deps-8a425bdc62aa7c08b4c53014a2d9cb8a83a7facd"
     ],
     [
@@ -329,11 +329,11 @@
       "stream-combiner2-f73061effc4e2f6acccb089f5289fc14107f2042"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "os-browserify-092ca608326ab333f286ccf72b76d43a050b6772"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "parents-9276878b4e9a57509f78a6260a9dc02bcd4d7b3a"
     ],
     [
@@ -341,27 +341,27 @@
       "path-platform-25d8179987e2a34e8dd392ea0ee82dd2ef2793d3"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "path-browserify-7f84e0c3842974f3c2b433e2023ca400e34dce00"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "process-f704e4a554692f9251d3a548e1f88e5c84b2655e"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "punycode-a08e12cedb84ec7105d769d1078608f17ef7db6a"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "querystring-es3-69613567df86936ed516f72df96279355f19bdd0"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "read-only-stream-d9eab804476554633606a0c7aefe27b6bd38e4c9"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "readable-stream-95ec70ec5b0118775912dd67d2b960796f229595"
     ],
     [
@@ -377,11 +377,11 @@
       "util-deprecate-d1ca30cebbccb952ec87d318340d521e08189c90"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "resolve-cc8f23cb127cbdbb35981f831c6492cb2d154f78"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "shasum-2d72cf8d880058a2a3235daa02c8c989276e9455"
     ],
     [
@@ -393,7 +393,7 @@
       "sha.js-1420bdcc5303f6026b67e853c409ad10d4ecac63"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "shell-quote-264b25cc681948bd946cd6058d6984c950302e24"
     ],
     [
@@ -413,11 +413,11 @@
       "jsonify-eeb63f4aa082f28566174879e9d9a8c8f5510095"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "stream-browserify-8d915306ceeaffc243d1157a22fad3eab9462c26"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "stream-http-02338666404a8cdf33474dbdde6846237d22732b"
     ],
     [
@@ -429,11 +429,11 @@
       "to-arraybuffer-04d981eeeac1ca3227a1ca4fcd252d7e30bbc7cf"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "string_decoder-14599404c160383782e003ca85c71fa246653f74"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "subarg-e5a1a0b14604b13426b5f2c6862736c160df983b"
     ],
     [
@@ -441,7 +441,7 @@
       "minimist-4b65c0e067de36f9facbf70a6fef62f7f5e03834"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "syntax-error-7b2286cb6f1e02675411cdcc7e73688f62fc1ae7"
     ],
     [
@@ -449,19 +449,19 @@
       "acorn-d02c592a7de68af7303b9693929b82579b1b8e32"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "through2-42733f625e034156b9c7c065246cd22543bc7961"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "timers-browserify-9c8fd636291a125093da733111a6be22c54e4c05"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "tty-browserify-4a3d08f2e591205a290bc7c7ff95a4cb069ef1eb"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "url-ccaa32dee1059a92e0e5bbb7a4595d8a0db15ed1"
     ],
     [
@@ -473,11 +473,11 @@
       "punycode-2d0e8cbbbe5ffdb732b9abc1f2c96575549e1f73"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "util-8a3f3eaf4fdbedde18af24c790f2352659893d31"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "vm-browserify-491c60136d768f877f8a6bb83e3ee1ee6a0d1e9b"
     ],
     [
@@ -485,18 +485,11 @@
       "indexof-c89e4ca5cea4ab9bc95607c57b4242af7f1a491c"
     ],
     [
-      "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e",
+      "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f",
       "xtend-f2e6f3282ca2e27082b30a9dd8d4af1e79f635fc"
     ]
   ],
   "refs": {
-    "@quarterto/object-sort-ea8cf3186adeb3f2fa3d0056ee626d68e53dd787": {
-      "from": "@quarterto/object-sort@latest",
-      "id": "@quarterto/object-sort@1.0.0",
-      "resolved": "file:../../../../../var/folders/nb/yrkkk0cx6jd1xw820d76p97wngv2__/T/f0178531c07d954fba5b11611-77680-17o7jzp",
-      "name": "@quarterto/object-sort",
-      "version": "1.0.0"
-    },
     "JSONStream-e8fd97bac996ae11333538cb66d370eaa583c090": {
       "from": "JSONStream@>=1.0.3 <2.0.0",
       "id": "JSONStream@1.0.7",
@@ -574,12 +567,12 @@
       "name": "balanced-match",
       "version": "0.3.0"
     },
-    "base64-js-0254f94b41a0bfe8b13bff4d6d00cc1a5379e8f8": {
-      "from": "base64-js@0.0.8",
-      "id": "base64-js@0.0.8",
-      "resolved": "https://registry.npmjs.org/base64-js/-/base64-js-0.0.8.tgz",
+    "base64-js-688eaa2134f78209956e7dee3a168f813e4aae1d": {
+      "from": "base64-js@>=1.0.2 <2.0.0",
+      "id": "base64-js@1.0.2",
+      "resolved": "https://registry.npmjs.org/base64-js/-/base64-js-1.0.2.tgz",
       "name": "base64-js",
-      "version": "0.0.8"
+      "version": "1.0.2"
     },
     "bn.js-ac697bd1e806be8dd81ee0aecfa2a81116ef736f": {
       "from": "bn.js@>=4.1.1 <5.0.0",
@@ -616,12 +609,12 @@
       "name": "browser-resolve",
       "version": "1.11.1"
     },
-    "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e": {
-      "from": "browserify@>=12.0.0 <13.0.0",
-      "id": "browserify@12.0.2",
-      "resolved": "https://registry.npmjs.org/browserify/-/browserify-12.0.2.tgz",
+    "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f": {
+      "from": "browserify@>=13.0.0 <14.0.0",
+      "id": "browserify@13.0.0",
+      "resolved": "https://registry.npmjs.org/browserify/-/browserify-13.0.0.tgz",
       "name": "browserify",
-      "version": "12.0.2"
+      "version": "13.0.0"
     },
     "browserify-aes-5ad00391c608acf39b21c9f9fcace76a9cad12e5": {
       "from": "browserify-aes@>=1.0.4 <2.0.0",
@@ -665,12 +658,12 @@
       "name": "browserify-zlib",
       "version": "0.1.4"
     },
-    "buffer-9b1469e61f4e98527bfb9fe219c5a682741c82a9": {
-      "from": "buffer@>=3.4.3 <4.0.0",
-      "id": "buffer@3.6.0",
-      "resolved": "https://registry.npmjs.org/buffer/-/buffer-3.6.0.tgz",
+    "buffer-4dcf2cc781451a51e286eea513b896f7003170f5": {
+      "from": "buffer@>=4.1.0 <5.0.0",
+      "id": "buffer@4.4.0",
+      "resolved": "https://registry.npmjs.org/buffer/-/buffer-4.4.0.tgz",
       "name": "buffer",
-      "version": "3.6.0"
+      "version": "4.4.0"
     },
     "buffer-xor-233afde294b317d16ea62ef63ea8ff8381b4d6a8": {
       "from": "buffer-xor@>=1.0.2 <2.0.0",
@@ -1347,6 +1340,6 @@
   },
   "rootDeps": {
     "@quarterto/object-sort": "@quarterto/object-sort-ea8cf3186adeb3f2fa3d0056ee626d68e53dd787",
-    "browserify": "browserify-64a12e2e80c1b401dff5d21b392820b062fa621e"
+    "browserify": "browserify-5aa546554b7a5b9b0ed5434db54b5232eb5ada5f"
   }
 }
