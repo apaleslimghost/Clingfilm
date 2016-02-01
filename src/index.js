@@ -5,6 +5,7 @@ const filter = require('lodash.filter');
 const transform = require('lodash.transform');
 const flatMap = require('@quarterto/flatmap');
 const renameKeys = require('@quarterto/rename-keys');
+const objectSort = require('@quarterto/object-sort');
 const transitiveDeps = require('@quarterto/transitive-dependencies');
 const npmlog = require('npmlog');
 const promisify = require('@quarterto/promisify');
@@ -45,7 +46,7 @@ export function depTreeToGraph(deps, from = 'root', edges = [], refs = {}) {
 		rootDeps[sanitised.name] = hashed;
 		depTreeToGraph(deps[k].dependencies, hashed, edges, refs);
 	}
-	return {edges, refs, rootDeps};
+	return {edges, refs: objectSort(refs), rootDeps: objectSort(rootDeps)};
 }
 
 // Converts a clingfilm graph to an npm ls/shrinkwrap style JSON tree
@@ -65,7 +66,7 @@ export function graftTree(roots, {edges: oldEdges, refs: oldRefs, rootDeps: oldR
 
 	return {
 		edges: oldEdges.filter(edge => !deps.some(dep => edge[0] === dep || edge[1] === dep)).concat(newEdges),
-		refs: Object.assign(pick(oldRefs, (pkg, phash) => !~deps.indexOf(phash)), newRefs),
-		rootDeps: Object.assign(oldRootDeps, newRootDeps)
+		refs: objectSort(Object.assign(pick(oldRefs, (pkg, phash) => !~deps.indexOf(phash)), newRefs)),
+		rootDeps: objectSort(Object.assign(oldRootDeps, newRootDeps))
 	};
 }

@@ -25,6 +25,7 @@
   "homepage": "https://github.com/quarterto/Clingfilm#readme",
   "dependencies": {
     "@quarterto/flatmap": "^1.0.0",
+    "@quarterto/object-sort": "^1.0.0",
     "@quarterto/promisify": "^1.0.0",
     "@quarterto/rename-keys": "^1.0.0",
     "@quarterto/transitive-dependencies": "^1.4.0",
