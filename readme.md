@@ -2,6 +2,11 @@ TODO: fully document, fully test (including integration tests)
 
 shrinkwrap without shrinkwrap, most of the time
 
+installation
+------------
+
+not on npm yet, `npm install -g quarterto/clingfilm` for now
+
 usage
 ------
 
