@@ -10,6 +10,8 @@ const promisify = require('@quarterto/promisify');
 const {mkdir: _mkTempDir} = require('temp').track();
 const mkTempDir = promisify(_mkTempDir);
 
+// Get an install tree from the package.json (or the array of packages to install/update)
+// Make npm install to a temp directory, so it outputs a maximal tree instead of just the diff to the current node_modules
 export const getIdealTree = (packages = []) => mkTempDir('clingfilm').then(where => loadConfig({
 	'dry-run': true,
 	'optional': false,
@@ -28,6 +30,8 @@ export function sanitiseDep(dependency) {
 	});
 }
 
+// Converts an npm ls/shrinkwrap style JSON tree to a clingfilm graph
+// Should be the inverse of depGraphToTree, i.e. depGraphToTree(depTreeToGraph(tree)) === tree
 export function depTreeToGraph(deps, from = 'root', edges = [], refs = {}) {
 	var rootDeps = {};
 	for(let k in deps) {
@@ -41,12 +45,15 @@ export function depTreeToGraph(deps, from = 'root', edges = [], refs = {}) {
 	return {edges, refs, rootDeps};
 }
 
+// Converts a clingfilm graph to an npm ls/shrinkwrap style JSON tree
+// Should be the inverse of depTreeToGraph, i.e. depTreeToGraph(depGraphToTree(graph)) === graph
 export const depGraphToTree = ({edges, refs}, node = 'root') => transform(edges.filter(edge => edge[0] === node), (tree, edge) => {
 	var dep = refs[edge[1]];
 	dep.dependencies = depGraphToTree({edges, refs}, edge[1]);
 	tree[dep.name] = dep;
 }, {});
 
+// Take a tree (usually from clingfilm.json) and replace the parts of it from root with the new tree
 export function graftTree(root, {edges: oldEdges, refs: oldRefs, rootDeps: oldRootDeps}, {edges: newEdges, refs: newRefs, rootDeps: newRootDeps}) {
 	var rootHash = oldRootDeps[root];
 	var deps = [rootHash, ...transitiveDeps(oldEdges, rootHash)];
