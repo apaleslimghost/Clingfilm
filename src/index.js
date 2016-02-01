@@ -6,15 +6,19 @@ const transform = require('lodash.transform');
 const renameKeys = require('@quarterto/rename-keys');
 const transitiveDeps = require('@quarterto/transitive-dependencies');
 const npmlog = require('npmlog');
+const promisify = require('@quarterto/promisify');
+const {mkdir: _mkTempDir} = require('temp').track();
+const mkTempDir = promisify(_mkTempDir);
 
-export const getIdealTree = (where = null, packages = []) => loadConfig({
+export const getIdealTree = (packages = []) => mkTempDir('clingfilm').then(where => loadConfig({
 	'dry-run': true,
 	'optional': false,
 	'progress': false,
 	'no-shrinkwrap': true,
 })
 	.then(() => install(where, packages))
-	.then(tree => lsFromTree('', tree, [], true)); // args, in order: package root (not important), tree, deps to list (empty array means all), silent mode (i.e. just return the tree obj)
+	.then(tree => lsFromTree('', tree, [], true)) // args, in order: package root (not important), tree, deps to list (empty array means all), silent mode (i.e. just return the tree obj)
+);
 
 export function sanitiseDep(dependency) {
 	return renameKeys(pick(dependency, ['_from', '_id', '_resolved', 'name', 'version', 'from', 'id', 'resolved']), {
